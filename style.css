@@ -1,0 +1,154 @@
+:root {
+    --primary: #6366f1;
+    --secondary: #22c55e;
+    --danger: #ef4444;
+    --bg: #f4f6fb;
+    --text: #1f2937;
+    --card: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.app {
+    background: var(--card);
+    width: 100%;
+    max-width: 420px;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+h1 {
+    text-align: center;
+    color: var(--text);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+#addBtn {
+    width: 45px;
+    background: var(--primary);
+    color: white;
+    font-size: 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#addBtn:hover {
+    background: #4f46e5;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin: 18px 0;
+}
+
+.filters button {
+    flex: 1;
+    margin: 0 4px;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: #e5e7eb;
+    transition: 0.3s;
+}
+
+.filters button.active {
+    background: var(--primary);
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    background: #f9fafb;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+li:hover {
+    transform: scale(1.02);
+    background: #eef2ff;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+.task-text {
+    cursor: pointer;
+    flex: 1;
+}
+
+.actions button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-left: 8px;
+    font-size: 16px;
+}
+
+.actions .edit {
+    color: var(--secondary);
+}
+
+.actions .delete {
+    color: var(--danger);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .app {
+        padding: 20px;
+    }
+}
